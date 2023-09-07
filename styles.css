@@ -1,0 +1,87 @@
+body {
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#game-container {
+    display: grid;
+    place-items: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px); 
+    grid-template-rows: repeat(20, 30px); 
+    gap: .7px; 
+    border: 1px solid #333;
+}
+
+#scoreboard {
+  font-size: 50px;
+  color: aqua;
+  position: absolute;
+  top: 0;
+  left: 5;
+}
+
+.cell {
+    width: 35px; 
+    height: 35px; 
+    border: .7px solid #ccc;
+    background-color: #2d2c50;
+}
+
+.filled {
+    background-color: aqua;
+}
+
+.row {
+    display: flex;
+}
+
+.filled.I {
+    background-color: #c4549c;
+}
+
+.filled.J {
+    background-color: #ff71ce;
+}
+
+.filled.L {
+    background-color: #01cdfe;
+}
+
+.filled.O {
+    background-color: #05ffa1;
+}
+
+.filled.T {
+    background-color: #b967ff;
+}
+
+.filled.S {
+    background-color: #fffb96;
+}
+
+.filled.Z {
+    background-color: #ff9a00;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
